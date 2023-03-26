@@ -1,6 +1,6 @@
 class MembersOnlyArticlesController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
-  before_action: authorize
+  before_action :authorize
   
 
   def index
